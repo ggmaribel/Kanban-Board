@@ -20,7 +20,7 @@
 
 .kanban__column-title {
     margin-bottom: 20px;
-    font-size: 30px;
+    font-size: 30 px;
     color: white;
     user-select: none;
 }
@@ -28,7 +28,7 @@
 .kanban__item-input {
     padding: 10px 15px;
     box-sizing: border-box;
-    background: white;
+    background:  white;
     border-radius: 5px;
     cursor: pointer;
 }

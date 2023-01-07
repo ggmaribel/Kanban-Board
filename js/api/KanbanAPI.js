@@ -30,23 +30,24 @@ export default class KanbanAPI {
     static updateItem(itemId, newProps) {
         const data = read()
         const [item, currentColumn] = (() => {
-            for(const column of data) {
+            for (const column of data) {
                 const item = column.items.find(item => item.id == itemId)
 
-            if(item) {
-                return [item, column]
-            }
+                if(item) {
+                    return [item, column]
+                }
             }
         })()
 
         if(!item) {
-            throw new Error("Iem not found")
+            throw new Error("Item not found")
         }
 
         item.content = newProps.content === undefined ? item.content : newProps.content
 
         if(
-            newProps.solumndId != undefined && newProps.position !== undefined
+            newProps.columnId !== undefined
+            && newProps.position !== undefined
         ) {
             const targetColumn = data.find(column => column.id == newProps.columnId)
 
@@ -65,7 +66,7 @@ export default class KanbanAPI {
     static deleteItem(itemId) {
         const data = read()
 
-        for(const column of data) {
+        for (const column of data) {
             const item = column.items.find(item => item.id == itemId)
 
             if(item) {
@@ -104,6 +105,6 @@ function read() {
     return JSON.parse(json)
 }
 
-function save() {
-    localStorage.setItem("kanban-sata", JSON.stringify(data))
+function save(data) {
+    localStorage.setItem("kanban-data", JSON.stringify(data))
 }
