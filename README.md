@@ -6,8 +6,8 @@ Kanban Board created with JavaScript and styled CSS to organize multiple tasks.
 - Drag task to change position.
 - Double click to delete task.
 
-<!-- <img src="img/kb.png" height="400"> -->
-<img src="img/kb.gif" height="400">
+<img src="img/kb.png" height="400">
+<img src="img/kb.gif" height="200" width="auto">
 
 # Features
 
