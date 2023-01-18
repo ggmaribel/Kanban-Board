@@ -1,13 +1,37 @@
+/* FONT STYLE */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100;200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+/* MAIN CSS */
+html {
+    min-height: 100vh;
+    background: linear-gradient(0deg, rgba(247,216,230,1) 0%, rgba(148,187,233,1) 50%);
+    background-repeat: no-repeat;
+    text-align: center;
+}
+html h1 {
+    font-family: 'Montserrat Alternates', sans-serif;
+    color: rgb(234, 233, 233);
+    font-size: 60px;
+}
 .kanban {
+    width: 85%;
+    margin: auto;
     display: flex;
     padding: 30px;
-    width: 750px;
-    background: #009578;
-    border-radius: 5px;
+    background: #f6f6f690;
+    border-radius: 10px;
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
 }
-
-.kanban * {
-    font-family: sans-serif;
+.kanban button {
+    width: 160px;
+    background: linear-gradient(90deg, rgba(133,88,191,.6) 0%, rgba(91,144,208,.6) 100%);
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    color: rgb(234, 233, 233);
+    letter-spacing: .6px;
+    word-spacing: 3px;
 }
 
 .kanban__column {
@@ -20,15 +44,17 @@
 
 .kanban__column-title {
     margin-bottom: 20px;
-    font-size: 30 px;
-    color: white;
+    font-size: 30px;
+    font-weight: 600;
+    color: rgb(164, 157, 191);
     user-select: none;
 }
 
 .kanban__item-input {
     padding: 10px 15px;
     box-sizing: border-box;
-    background:  white;
+    background:  rgba(255, 255, 255, 0.7);
+    color: rgb(126, 126, 126);
     border-radius: 5px;
     cursor: pointer;
 }
@@ -52,4 +78,12 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+
+@media(max-width: 820px) {
+    .kanban {
+        display: flex;
+        flex-direction: column;
+    }
+    
 }
